@@ -3,7 +3,6 @@ require 'db.php';
 require 'helpers.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'DELETE' && $_SERVER['REQUEST_METHOD'] !== 'POST') {
-    // allow DELETE or POST with id param for simplicity
     respond(['error'=>'method not allowed'], 405);
 }
 
@@ -11,7 +10,6 @@ $input = json_decode(file_get_contents('php://input'), true);
 $id = $input['id'] ?? ($_GET['id'] ?? ($_POST['id'] ?? null));
 if (!$id) respond(['error'=>'id required'], 400);
 
-// optional delete image file
 $stmt = $pdo->prepare("SELECT image_path FROM items WHERE id = :id");
 $stmt->execute([':id'=>$id]);
 $r = $stmt->fetch();

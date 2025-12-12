@@ -82,7 +82,7 @@ const Header = () => (
         </h1>
       </div>
       <p className="text-gray-600 text-lg">
-        Simpan dan kenang momen berharga dalam hidup Anda
+        Simpan dan kenangan dan momen berharga
       </p>
     </div>
   </header>
@@ -92,7 +92,7 @@ const Footer = () => (
   <footer className="mt-12 text-center">
     <div className="bg-white rounded-lg shadow-md p-6">
       <p className="text-gray-600">
-        © 2024 Museum Digital Barang Kenangan. Simpan kenangan Anda dengan aman.
+        © 2025 Museum Digital Barang Kenangan
       </p>
     </div>
   </footer>

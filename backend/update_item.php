@@ -15,7 +15,6 @@ $location = $_POST['location'] ?? null;
 
 $image_path = handle_image_upload('image'); // null jika tidak upload
 
-// build update
 $fields = [];
 $params = [':id'=>$id];
 if ($title !== null) { $fields[] = "title = :title"; $params[':title']=$title; }

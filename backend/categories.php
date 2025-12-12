@@ -19,4 +19,3 @@ if ($method === 'POST') {
 }
 
 respond(['error'=>'method not allowed'], 405);
-

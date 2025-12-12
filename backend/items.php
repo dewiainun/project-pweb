@@ -5,7 +5,6 @@ require 'helpers.php';
 $method = $_SERVER['REQUEST_METHOD'];
 
 if ($method === 'GET') {
-    // support query ?id= or list with optional ?q= & ?category_id=
     if (isset($_GET['id'])) {
         $id = intval($_GET['id']);
         $stmt = $pdo->prepare("SELECT i.*, c.name as category_name FROM items i LEFT JOIN categories c ON i.category_id=c.id WHERE i.id=:id");

@@ -1,5 +1,4 @@
 <?php
-// db.php
 header("Content-Type: application/json; charset=utf-8");
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
@@ -9,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') exit(0);
 $DB_HOST = '127.0.0.1';
 $DB_NAME = 'museum_db';
 $DB_USER = 'root';
-$DB_PASS = ''; // sesuaikan
+$DB_PASS = '';
 
 try {
     $pdo = new PDO("mysql:host=$DB_HOST;dbname=$DB_NAME;charset=utf8mb4", $DB_USER, $DB_PASS, [

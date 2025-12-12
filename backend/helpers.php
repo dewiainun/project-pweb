@@ -1,5 +1,4 @@
 <?php
-// helpers.php
 function respond($data, $code = 200) {
     http_response_code($code);
     header('Content-Type: application/json; charset=utf-8');
@@ -20,7 +19,7 @@ function handle_image_upload($file_field = 'image') {
     $safeName = uniqid('img_') . '.' . ($ext ?: 'jpg');
     $dest = $uploadsDir . '/' . $safeName;
     if (move_uploaded_file($tmp, $dest)) {
-        return 'uploads/' . $safeName; // relative path for access
+        return 'uploads/' . $safeName;
     }
     return null;
 }

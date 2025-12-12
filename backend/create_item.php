@@ -12,8 +12,7 @@ $location = $_POST['location'] ?? null;
 
 if (!$title) respond(['error'=>'title required'], 400);
 
-$image_path = handle_image_upload('image'); // null jika tidak ada
-
+$image_path = handle_image_upload('image');
 $stmt = $pdo->prepare("INSERT INTO items (title, category_id, story, date_acquired, location, image_path) VALUES (:title, :cat, :story, :date_acquired, :location, :image)");
 $stmt->execute([
     ':title' => $title,
